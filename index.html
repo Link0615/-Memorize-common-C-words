@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背单词</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="progress-section">
+            <div>
+                <label>已掌握单词数：</label>
+                <progress id="total-progress" value="0" max="100"></progress>
+                <span id="total-progress-text">0/0</span>
+            </div>
+            <div>
+                <label>当前单词掌握进度：</label>
+                <progress id="word-progress" value="0" max="100"></progress>
+                <span id="word-progress-text">0%</span>
+            </div>
+        </div>
+        <div id="word-section">
+            <h1 id="english-word"></h1>
+            <button id="reveal-button" onclick="revealTranslation()">显示翻译</button>
+            <h1 id="chinese-translation" style="display: none;"></h1>
+        </div>
+        <div id="buttons-section">
+            <button id="know-button" onclick="knowWord()">我知道</button>
+            <button id="dont-know-button" onclick="dontKnowWord()">我不知道</button>
+            <button id="next-button" onclick="getNextWord()" style="display: none;">下一个</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
