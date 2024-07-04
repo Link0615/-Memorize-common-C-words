@@ -61,6 +61,7 @@ const words = [
 let currentWordIndex = 0;
 let wordCounter = 0;
 let masteredWords = 0;
+const totalWords = words.length; // 初始化时记录总单词数
 
 function shuffleWords() {
     for (let i = words.length - 1; i > 0; i--) {
@@ -129,7 +130,6 @@ function dontKnowWord() {
 }
 
 function updateTotalProgress() {
-    const totalWords = words.length + masteredWords;
     const progress = (masteredWords / totalWords) * 100;
     
     document.getElementById("total-progress").value = progress;
